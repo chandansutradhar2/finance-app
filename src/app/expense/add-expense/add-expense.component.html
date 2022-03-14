@@ -1,27 +1,26 @@
 <!-- <p>add-expense works!</p>
 <input type="text" [(ngModel)]="expName" /> -->
 <div class="exp">
-    <form class="exp-form">
+    <form [formGroup]="expFormGroup" class="exp-form">
         <mat-form-field appearance="outline">
             <mat-label>Expense Title</mat-label>
-            <input matInput>
+            <input matInput formControlName="title">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Expense Amount</mat-label>
-            <input matInput>
+            <input matInput formControlName="amount">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Expense Date</mat-label>
-            <input matInput>
+            <input matInput formControlName="expDate">
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Select</mat-label>
-            <mat-select>
-                <mat-option value="one">Groceries</mat-option>
-                <mat-option value="two">Travel</mat-option>
+            <mat-select formControlName="category">
+                <mat-option [value]=i *ngFor="let i of categories">{{i}}</mat-option>
             </mat-select>
         </mat-form-field>
-        <button mat-raised-button color="primary">Add Expense</button>
+        <button mat-raised-button color="primary" (click)="addExpense()">Add Expense</button>
     </form>
 
 </div>

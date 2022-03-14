@@ -1,5 +1,5 @@
 <div class="container">
-    <app-add-expense></app-add-expense>
+    <app-add-expense (onNewExp)="onNewExp($event)"></app-add-expense>
     <app-expense-filter></app-expense-filter>
-    <app-expense-list></app-expense-list>
+    <app-expense-list [expenses]="expenses"></app-expense-list>
 </div>

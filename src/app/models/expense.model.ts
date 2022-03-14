@@ -3,7 +3,7 @@ export interface Expense {
   title: string;
   amount: number;
   createdBy: string;
-  createdOn: string;
+  createdOn: number;
   expDate: number;
   category: string;
 }
