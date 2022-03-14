@@ -9,6 +9,13 @@ const rootUrls: Routes = [
     path: 'expenses',
     component: AddExpenseComponent,
   },
+  {
+    path: 'investment',
+    loadChildren: () =>
+      import('./investment/investment.module').then(
+        (investMdl) => investMdl.InvestmentModule
+      ),
+  },
 ];
 
 @NgModule({
