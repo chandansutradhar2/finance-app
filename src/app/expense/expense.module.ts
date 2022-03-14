@@ -7,6 +7,7 @@ import { ExpenseFilterComponent } from './expense-filter/expense-filter.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ExpenseMainComponent } from './expense-main/expense-main.component';
+import { SharedModule } from '../shared/shared.module';
 
 const expRoutes: Routes = [{ path: '', component: ExpenseMainComponent }];
 @NgModule({
@@ -18,7 +19,7 @@ const expRoutes: Routes = [{ path: '', component: ExpenseMainComponent }];
     ExpenseMainComponent,
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     FormsModule,
     RouterModule.forChild(expRoutes),
     ReactiveFormsModule,

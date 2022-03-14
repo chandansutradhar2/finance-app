@@ -1,2 +1,27 @@
-<p>add-expense works!</p>
-<input type="text" [(ngModel)]="expName" />
+<!-- <p>add-expense works!</p>
+<input type="text" [(ngModel)]="expName" /> -->
+<div class="exp">
+    <form class="exp-form">
+        <mat-form-field appearance="outline">
+            <mat-label>Expense Title</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Expense Amount</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Expense Date</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Select</mat-label>
+            <mat-select>
+                <mat-option value="one">Groceries</mat-option>
+                <mat-option value="two">Travel</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Add Expense</button>
+    </form>
+
+</div>

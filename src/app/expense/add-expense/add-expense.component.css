@@ -1,0 +1,10 @@
+.exp {
+  display: flex;
+  justify-content: center;
+}
+
+.exp-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0.5rem;
+}
