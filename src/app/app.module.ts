@@ -8,6 +8,7 @@ import { ExpenseModule } from './expense/expense.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './utlity/header/header.component';
 import { AppRoutingModule } from './app-routing.routing';
+import { InvestmentModule } from './investment/investment.module';
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from './app-routing.routing';
     SharedModule,
     ExpenseModule,
     AppRoutingModule,
+    InvestmentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
