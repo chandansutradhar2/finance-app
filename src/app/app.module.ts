@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ExpenseModule } from './expense/expense.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './utlity/header/header.component';
+import { AppRoutingModule } from './app-routing.routing';
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
@@ -15,6 +16,7 @@ import { HeaderComponent } from './utlity/header/header.component';
     BrowserAnimationsModule,
     SharedModule,
     ExpenseModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,9 +1,7 @@
 <mat-toolbar color="primary">
-  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button> -->
-  <span>Finance <strong> | Planner</strong></span>
-  <button mat-button>Expenses</button>
+
+  <span style="cursor: pointer;" [routerLink]="''">Finance <strong> | Planner</strong></span>
+  <button mat-button [routerLink]="'/expenses'">Expenses</button>
   <button mat-button>Investment</button>
   <button mat-button>Learning</button>
   <span class="example-spacer"></span>
