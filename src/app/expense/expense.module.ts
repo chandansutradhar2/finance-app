@@ -4,7 +4,7 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
 import { ExpenseFilterComponent } from './expense-filter/expense-filter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ExpenseMainComponent } from './expense-main/expense-main.component';
 
@@ -17,7 +17,12 @@ const expRoutes: Routes = [{ path: '', component: ExpenseMainComponent }];
     ExpenseFilterComponent,
     ExpenseMainComponent,
   ],
-  imports: [CommonModule, FormsModule, RouterModule.forChild(expRoutes)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(expRoutes),
+    ReactiveFormsModule,
+  ],
   exports: [AddExpenseComponent, ExpenseListComponent, RouterModule],
 })
 export class ExpenseModule {}
