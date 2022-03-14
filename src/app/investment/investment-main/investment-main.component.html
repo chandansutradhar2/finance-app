@@ -1,0 +1,13 @@
+<!-- <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Mutual Funds">Content 1</mat-tab>
+    <mat-tab label="Stocks & Shares">Content 2</mat-tab>
+    <mat-tab label="Debit Funds">Content 3</mat-tab>
+</mat-tab-group> -->
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold" [routerLink]="'mutualfunds'">Mutual Funds</mat-button-toggle>
+    <mat-button-toggle value="italic" [routerLink]="'shares'">Shares & Stocks</mat-button-toggle>
+    <mat-button-toggle value="underline" [routerLink]="'debtfunds'">Debt Funds</mat-button-toggle>
+</mat-button-toggle-group>
+
+<router-outlet></router-outlet>
