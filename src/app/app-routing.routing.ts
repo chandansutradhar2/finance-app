@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminGuard } from './admin/admin.guard';
 import { AddExpenseComponent } from './expense/add-expense/add-expense.component';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
 
@@ -15,6 +16,12 @@ const rootUrls: Routes = [
       import('./investment/investment.module').then(
         (investMdl) => investMdl.InvestmentModule
       ),
+  },
+  {
+    path: 'admin',
+    canLoad: [AdminGuard],
+    loadChildren: () =>
+      import('./admin/admin.module').then((adm) => adm.AdminModule),
   },
 ];
 
