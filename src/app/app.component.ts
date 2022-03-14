@@ -7,5 +7,6 @@ import { Observable } from 'rxjs/internal/Observable';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  userName: string = '';
   constructor() {}
 }

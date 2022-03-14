@@ -8,7 +8,7 @@ import { ExpenseModule } from './expense/expense.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, ExpenseModule],
+  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, ExpenseModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -4,6 +4,7 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
 import { ExpenseFilterComponent } from './expense-filter/expense-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { ExpenseFilterComponent } from './expense-filter/expense-filter.componen
     ExpenseItemComponent,
     ExpenseFilterComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [AddExpenseComponent, ExpenseListComponent],
 })
 export class ExpenseModule {}
