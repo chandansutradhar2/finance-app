@@ -21,12 +21,13 @@
                     [ngClass]="(password.hasError('required') && (password.touched || password.dirty))?'error':'no-error'">
                     Password is required
                 </span>
-                <span class="no-error">
+                <span [ngStyle]="{'color':password.hasError('pattern')?'red':'white'}">
                     Password should be minimum of 7 alphanumeric ,one special character
                 </span>
             </div>
 
-            <button mat-raised-button color="warn" (click)="login()">Login</button>
+            <button mat-raised-button [style.background-color]="loginClicked?'green':'red'"
+                (click)="login()">Login</button>
         </div>
     </div>
     {{password.errors | json}}
