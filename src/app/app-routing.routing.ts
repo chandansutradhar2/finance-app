@@ -25,6 +25,11 @@ const rootUrls: Routes = [
     loadChildren: () =>
       import('./admin/admin.module').then((adm) => adm.AdminModule),
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.module').then((auth) => auth.AuthModule),
+  },
 ];
 
 @NgModule({
