@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
@@ -7,6 +7,10 @@ import { Observable } from 'rxjs/internal/Observable';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  @ViewChild('h2') h2Element!: ElementRef;
   userName: string = '';
-  constructor() {}
+  constructor() {
+    //here we want to access html
+    this.h2Element.nativeElement;
+  }
 }

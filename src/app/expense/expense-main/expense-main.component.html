@@ -1,5 +1,7 @@
 <div class="container">
+    <button mat-button (click)="someAction()">Trigger Change</button>
+    <input type="text" [(ngModel)]="userName" />
     <app-add-expense (onNewExp)="onNewExp($event)"></app-add-expense>
-    <app-expense-filter></app-expense-filter>
+    <app-expense-filter [userName]="userName" [filterOptions]="filterOptions"></app-expense-filter>
     <app-expense-list [expenses]="expenses"></app-expense-list>
 </div>

@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Expense } from 'src/app/models/expense.model';
 @Component({
@@ -6,7 +13,7 @@ import { Expense } from 'src/app/models/expense.model';
   templateUrl: './add-expense.component.html',
   styleUrls: ['./add-expense.component.css'],
 })
-export class AddExpenseComponent implements OnInit {
+export class AddExpenseComponent implements OnInit, OnChanges {
   @Output() onNewExp: EventEmitter<Expense> = new EventEmitter();
   categories: string[] = [
     'groceries',
@@ -27,6 +34,10 @@ export class AddExpenseComponent implements OnInit {
       category: ['', Validators.required],
       expDate: ['', Validators.required],
     });
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    alert(changes);
+    console.log('onchange', changes);
   }
 
   ngOnInit(): void {

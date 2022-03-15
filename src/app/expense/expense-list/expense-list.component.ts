@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 import { Expense } from 'src/app/models/expense.model';
 
 @Component({
@@ -8,7 +9,11 @@ import { Expense } from 'src/app/models/expense.model';
 })
 export class ExpenseListComponent implements OnInit {
   @Input() expenses: Expense[] = [];
-  constructor() {}
+  constructor(private authSvc: AuthService) {
+    console.log(authSvc.user);
+  }
 
   ngOnInit(): void {}
+
+  doSomething() {}
 }

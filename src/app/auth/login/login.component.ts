@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { User } from 'src/app/models/user.model';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,7 @@ export class LoginComponent implements OnInit {
     Validators.required,
     Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/),
   ]);
-  constructor() {}
+  constructor(private authSvc: AuthService) {}
 
   ngOnInit(): void {
     this.password.valueChanges.subscribe((val) => {
@@ -42,5 +44,12 @@ export class LoginComponent implements OnInit {
       : (this.loginClicked = false);
     console.log(this.email.value, this.password.value);
     this.applyStyles();
+    let user: User = {
+      firstName: 'chandan',
+      lastName: 'naresh',
+      email: 'chandansutradhar2@gmail.com',
+      mobileNo: '8080811145',
+    };
+    this.authSvc.user = user;
   }
 }
