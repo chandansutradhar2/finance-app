@@ -1,0 +1,27 @@
+#expenses {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#expenses td,
+#expenses th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#expenses tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#expenses tr:hover {
+  background-color: #ddd;
+}
+
+#expenses th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}

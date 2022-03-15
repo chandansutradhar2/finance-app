@@ -1,4 +1,31 @@
-<p>expense-list works!</p>
-<ul>
+<div class="container">
+    <table id="expenses">
+
+        <tr>
+            <td>Sr No</td>
+            <td>Title</td>
+            <td>Amount</td>
+            <td>Category</td>
+            <td>Exp Date</td>
+            <td>Created On</td>
+            <td>Created By</td>
+        </tr>
+
+
+        <tr *ngFor="let e of expenses; let idx=index ">
+            <td>
+                {{idx+1}}
+            </td>
+            <td>{{e.title}}</td>
+            <td>{{e.amount}}</td>
+            <td>{{e.category}}</td>
+            <td>{{e.expDate}}</td>
+            <td>{{e.createdOn}}</td>
+            <td>{{e.createdBy}}</td>
+        </tr>
+
+    </table>
+</div>
+<!-- <ul>
     <li *ngFor="let e of expenses">{{e.title}} {{e.amount}} {{e.category}} {{e.createdOn}}</li>
-</ul>
+</ul> -->
