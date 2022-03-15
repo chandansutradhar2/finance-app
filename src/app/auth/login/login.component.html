@@ -4,8 +4,11 @@
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput inputmode="email" [formControl]="email">
-                <mat-error>
+                <mat-error *ngIf="email.hasError('required')">
                     Email cannot be left blank
+                </mat-error>
+                <mat-error *ngIf="email.hasError('email')">
+                    Email format is invalid
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
@@ -15,4 +18,5 @@
             <button mat-raised-button color="warn" (click)="login()">Login</button>
         </div>
     </div>
+    {{email.errors | json}}
 </div>
