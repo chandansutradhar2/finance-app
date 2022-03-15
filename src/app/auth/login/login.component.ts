@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.email.markAsDirty();
+    this.password.markAsDirty();
     console.log(this.email.value, this.password.value);
   }
 }

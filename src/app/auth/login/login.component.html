@@ -1,6 +1,7 @@
 <div class="container">
     <div>
         <div class="login">
+            <h4>Login to Finance App</h4>
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput inputmode="email" [formControl]="email">
@@ -16,7 +17,8 @@
                     <mat-label>Password</mat-label>
                     <input matInput type="password" [formControl]="password" />
                 </mat-form-field>
-                <span [ngClass]="password.hasError('required')?'error':'no-error'">
+                <span
+                    [ngClass]="(password.hasError('required') && (password.touched || password.dirty))?'error':'no-error'">
                     Password is required
                 </span>
                 <span class="no-error">
