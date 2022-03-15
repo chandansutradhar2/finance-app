@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="container">
+    <div>
+        <div class="login">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput inputmode="email" [formControl]="email">
+                <mat-error>
+                    Email cannot be left blank
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" [formControl]="password">
+            </mat-form-field>
+            <button mat-raised-button color="warn" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>
