@@ -13,3 +13,12 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.error {
+  color: red;
+  font-size: small;
+}
+
+.no-error {
+  visibility: hidden;
+}

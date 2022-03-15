@@ -11,12 +11,21 @@
                     Email format is invalid
                 </mat-error>
             </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
-                <input matInput type="password" [formControl]="password">
-            </mat-form-field>
+            <div style="display: flex;flex-direction: column;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" [formControl]="password" />
+                </mat-form-field>
+                <span [ngClass]="password.hasError('required')?'error':'no-error'">
+                    Password is required
+                </span>
+                <span class="no-error">
+                    Password should be minimum of 7 alphanumeric ,one special character
+                </span>
+            </div>
+
             <button mat-raised-button color="warn" (click)="login()">Login</button>
         </div>
     </div>
-    {{email.errors | json}}
+    {{password.errors | json}}
 </div>
