@@ -32,9 +32,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SalPipePipe } from '../pipes/sal-pipe.pipe';
+import { MyCurrencyPipe } from '../pipes/MyCurrency.pipe';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, SalPipePipe, MyCurrencyPipe],
   imports: [
     CommonModule,
     MatCheckboxModule,
@@ -103,6 +105,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatSortModule,
     MatPaginatorModule,
     DashboardComponent,
+    SalPipePipe,
+    MyCurrencyPipe,
   ],
 })
 export class SharedModule {}

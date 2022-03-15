@@ -17,11 +17,11 @@
                 {{idx+1}}
             </td>
             <td>{{e.title}}</td>
-            <td>{{e.amount}}</td>
+            <td>&#8377; {{e.amount}}</td>
             <td>{{e.category | uppercase}}</td>
             <td>{{e.expDate | date :'mediumDate'}}</td>
             <td>{{e.createdOn | date :'mediumDate'}}</td>
-            <td>{{e.createdBy}}</td>
+            <td>{{e.createdBy | saluation}}</td>
         </tr>
 
     </table>
