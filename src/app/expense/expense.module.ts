@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { ExpenseListComponent } from './expense-list/expense-list.component';
 import { ExpenseItemComponent } from './expense-item/expense-item.component';
@@ -8,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ExpenseMainComponent } from './expense-main/expense-main.component';
 import { SharedModule } from '../shared/shared.module';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const expRoutes: Routes = [{ path: '', component: ExpenseMainComponent }];
 @NgModule({
@@ -20,6 +20,7 @@ const expRoutes: Routes = [{ path: '', component: ExpenseMainComponent }];
   ],
   imports: [
     SharedModule,
+    MatNativeDateModule,
     FormsModule,
     RouterModule.forChild(expRoutes),
     ReactiveFormsModule,

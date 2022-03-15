@@ -18,9 +18,9 @@
             </td>
             <td>{{e.title}}</td>
             <td>{{e.amount}}</td>
-            <td>{{e.category}}</td>
-            <td>{{e.expDate}}</td>
-            <td>{{e.createdOn}}</td>
+            <td>{{e.category | uppercase}}</td>
+            <td>{{e.expDate | date :'mediumDate'}}</td>
+            <td>{{e.createdOn | date :'mediumDate'}}</td>
             <td>{{e.createdBy}}</td>
         </tr>
 
