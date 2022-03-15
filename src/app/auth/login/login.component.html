@@ -28,6 +28,7 @@
 
             <button mat-raised-button [style.background-color]="loginClicked?'green':'red'"
                 (click)="login()">Login</button>
+            <button mat-button [routerLink]="'./signup'">New User? SignUp</button>
         </div>
     </div>
     {{password.errors | json}}

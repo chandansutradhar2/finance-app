@@ -1,0 +1,27 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h4 {
+  border-color: brown;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-size: small;
+}
+
+.no-error {
+  visibility: hidden;
+}

@@ -1,1 +1,44 @@
-<p>signup works!</p>
+<div class="container">
+    <div style="width: 450px;">
+        <form [formGroup]="signUpFormGrp" class="login">
+            <h4>Create Account with us</h4>
+            <mat-form-field appearance="outline">
+                <mat-label>FirstName</mat-label>
+                <input matInput inputmode="text" formControlName="firstName">
+
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput inputmode="text" formControlName="lastName">
+
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput inputmode="email" formControlName="email">
+
+            </mat-form-field>
+            <div style="display: flex;flex-direction: column;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile No</mat-label>
+                    <input matInput inputmode="tel" formControlName="mobileNo">
+
+                </mat-form-field>
+                <!-- <span
+                    [ngClass]="(password.hasError('required') && (password.touched || password.dirty))?'error':'no-error'">
+                    Password is required
+                </span> -->
+                <!-- <span [ngStyle]="{'color':password.hasError('pattern')?'red':'white'}">
+                    Password should be minimum of 7 alphanumeric ,one special character
+                </span> -->
+            </div>
+
+            <button mat-raised-button color="warn" (click)="signUp()">CREATE ACCOUNT</button>
+            <button mat-button [routerLink]="'auth'">Existing User? Login</button>
+        </form>
+    </div>
+    {{signUpFormGrp.value | json}}
+</div>
